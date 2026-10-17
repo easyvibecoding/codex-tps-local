@@ -4,7 +4,7 @@ Build/install with `scripts/install.sh`. It only replaces the exact `Codex TPS L
 
 Read back the installed bundle identity/version, strict code signature, and exact sandbox entitlements using `scripts/verify-local-only.py '/Applications/Codex TPS Local.app'`. Both the GUI and bundled snapshot must carry the same restricted policy. The app is locally ad-hoc signed, not notarized.
 
-Run the installed `Contents/MacOS/codex-tps-local-snapshot --json`. Confirm the default session root exists and `status` is `ready`; zero completed requests can be valid. Then open the GUI, refresh its panel, and observe current metrics. Check the GUI process with `lsof -nP -a -p PID -i` after launch and a refresh cycle: there should be no process-owned TCP/UDP sockets.
+Run the installed `Contents/Helpers/Codex TPS Snapshot.app/Contents/MacOS/codex-tps-local-snapshot --json`. Confirm the default session root exists and `status` is `ready`; zero completed requests can be valid. Then open the GUI, refresh its panel, and observe current metrics. Check the GUI process with `lsof -nP -a -p PID -i` after launch and a refresh cycle: there should be no process-owned TCP/UDP sockets.
 
 If the sessions directory is missing or inaccessible, the app must show an unavailable/error state. Do not broaden filesystem entitlements or disable the sandbox to force a successful read. Other Codex homes require a separately reviewed design change.
 

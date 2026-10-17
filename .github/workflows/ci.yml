@@ -22,3 +22,5 @@ jobs:
         run: swift test
       - name: Build sandboxed app
         run: ./scripts/build-app.sh
+      - name: Run the packaged sandboxed helper
+        run: python3 Tests/smoke-snapshot.py 'dist/Codex TPS Local.app' --ci-fixture

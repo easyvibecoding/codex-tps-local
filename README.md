@@ -39,7 +39,7 @@ The 1m, 5m, 30m, and 1h views divide completed-request token totals by the entir
 The bundled read-only snapshot command is:
 
 ```sh
-'/Applications/Codex TPS Local.app/Contents/MacOS/codex-tps-local-snapshot' --json
+'/Applications/Codex TPS Local.app/Contents/Helpers/Codex TPS Snapshot.app/Contents/MacOS/codex-tps-local-snapshot' --json
 ```
 
 ## Development
